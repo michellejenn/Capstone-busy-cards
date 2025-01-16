@@ -1,0 +1,45 @@
+@use "../../styles/partials/variables" as *;
+// @use "../../styles/partials/font" as *;
+@use "../../styles/partials/mixins" as *;
+img{
+    margin:0;
+    padding: 0;
+}
+.Hero{
+    // width: 100vw;
+    height: 80vh;
+    position: relative;
+    
+   
+
+    &__imageback{
+        width: 70vw;
+        height: 70vh;
+        object-fit: cover;
+        position:absolute;
+        top: 2rem;
+    left: 8rem;
+   
+     
+        
+    }
+
+    &__image{
+        // width: 60vw;
+       
+        width: 70vw;
+    height: 70vh;
+    object-fit: cover;
+    position:absolute;
+    top: 4rem;
+    left: 10rem;
+    // box-shadow: 12px 12px 2px 1px rgb(190, 178, 155);  
+    box-shadow: 3px 3px grey, -1em 0 .4em rgb(200, 171, 118);    
+    }
+
+    
+}
+
+
+
+

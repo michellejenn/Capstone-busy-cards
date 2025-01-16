@@ -1,0 +1,29 @@
+@use "../../styles/partials/variables" as *;
+// @use "../../styles/partials/font" as *;
+@use "../../styles/partials/mixins" as *;
+.header{
+    background-color: lightblue;
+    padding: 1rem 2rem 0 2rem;
+   
+
+    &__logo{
+        margin: 0;
+        // display: flex;
+        // justify-self: center;
+    }
+    &__secondSection{
+        display: flex;
+        justify-content: space-between;
+        padding:1rem 0 0 0;
+        
+        margin:0;
+       
+    }
+    &__items{
+        border-right: 2px solid grey;
+        margin-bottom: 1rem;
+        padding:0rem 1rem 1rem 0;
+        border-bottom: 2px solid grey;
+        box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
+    }
+}
