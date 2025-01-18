@@ -1,29 +1,87 @@
 @use "../../styles/partials/variables" as *;
-// @use "../../styles/partials/font" as *;
+@use "../../styles/partials/fonts" as *;
 @use "../../styles/partials/mixins" as *;
 .header{
-    background-color: lightblue;
-    padding: 1rem 2rem 0 2rem;
+
+
+
+    font-family: "Outfit";
+    font-weight: 500;
+    margin:0 $mobile-padding-sides;
+    padding:  $mobile-padding-seperate 0;
+    border-bottom: 1.5px solid grey;
+
    
+    
+    @include tablet{
+   
+    }
+   
+    &__content{
+        display:flex;
+        justify-content: space-between;
+    }
+    &__banner{
+        display:flex;
+        align-items: center;
+        gap: 2.5rem;
+    }
+    &__search{
+    
+        border-radius: 2rem;
+        padding: 0.5rem;
+        border: 2px solid black;
+        display:flex;
+        flex: 1;
+        width: 20vw;
+        
+    }
+    &__search-container{
+        display: flex;
+        align-items: center;
+        
+        position:relative;
+    }
+    &__searchicon{
+        padding: 6px;
+        border: none;
+        background-color:white;
+        height:1.8rem;
+        color: white;
+        cursor: pointer;
+        border-radius: 1rem;
+        position:absolute;
+        right: 0.2rem;
+        top:0.2rem;
+        
+        &:hover {
+            background-color: lightgrey;
+          }
+    }
 
     &__logo{
+      
         margin: 0;
-        // display: flex;
-        // justify-self: center;
-    }
-    &__secondSection{
-        display: flex;
-        justify-content: space-between;
-        padding:1rem 0 0 0;
-        
-        margin:0;
        
+        height:2rem;
+    
+        
+        
+        // object-fit: cover;
+       
+  
     }
+
     &__items{
-        border-right: 2px solid grey;
-        margin-bottom: 1rem;
-        padding:0rem 1rem 1rem 0;
-        border-bottom: 2px solid grey;
-        box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
+        
     }
+    &__item{
+        margin: 0;
+        font-weight:300;
+    }
+ 
+       
+
+    
+  
 }

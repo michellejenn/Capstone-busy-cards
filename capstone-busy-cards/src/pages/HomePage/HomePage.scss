@@ -1,0 +1,9 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/fonts" as *;
+@use "../../styles/partials/mixins" as *;
+body{
+    // background: linear-gradient(to bottom,$primary-color-blue, $primary-color-peach); 
+    // background-color:  $primary-color-peach;
+    font-family: "Outfit";
+}
+
