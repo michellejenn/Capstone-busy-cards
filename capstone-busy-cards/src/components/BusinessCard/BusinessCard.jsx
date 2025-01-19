@@ -2,64 +2,103 @@ import "./BusinessCard.scss";
 import {Link} from "react-router-dom";
 import Location from '../Icons/Location';
 import Group4 from "../Icons/Group4";
-
+import logoIcon from "../../assets/images/Icons/BIZICARDICONLOGO.png";
+import seeMore from "../../assets/images/Icons/eye.png";
+import star from "../../assets/images/Icons/icons8-star-filled-32.png";
+import Mail from "../Icons/Mail";
+import Instagram from "../Icons/Instagram";
+import LinkedIn from "../Icons/LinkedIn";
+import Phone from "../Icons/Phone";
+import Add from "../Icons/Add";
+import Share from "../Icons/Share";
 const baseURL = import.meta.env.VITE_API_URL;
 
 function BusinessCard(props){
     return(
+        <>
         <section className="businessCard__wrapper">
                     <section className="businessCard">
                 <section className="businessCard__top">
-                    <p className="businessCard__logo">
-                        <Group4/>
-                    </p>
-                
-                    {/* <img className="businessCard__logo" src="" alt="an image" /> */}
-                    <p className="businessCard__name">
-                        Mimi and sons <span className="businessCard__detail">verified</span>
-                    </p>
-                    <p className="businessCard__detail">
-                        interior decoration
-                    </p>
-                    <p className="businessCard__detail">
-                        Services: garden design, etc.
-                    </p>
-
-
+                    <article className="businessCard__logoWrapper">
+                        <img className ="businessCard__logo"src={logoIcon} alt="" />
+                    </article>
+             
                 </section>
             
                 <section className="businessCard__bottom">
+                    <section className="businessCard__starWrapper">
+                        <img src={star} alt="" className="businessCard__star" />
+                        <p className="businessCard__starValue">
+                            4.5
+                        </p>
+                    </section>
+                    <section className="businessCard__profileWrapper">
+                        <h2 className="businessCard__name">
+                            Mimi and sons <span className="businessCard__detail">verified</span>
+                        </h2>
+                        <p className="businessCard__category">
+                            Interior decoration
+                        </p>
+                        <p className="businessCard__location">
+                            <span className="businessCard__locationLogo"><Location/>
+                            </span>Calgary, Alberta</p>
+                    </section>
+                        <ul className="businessCard__services">
+                            <li className="businessCard__servicesItem">garden design</li>
+                            <li className="businessCard__servicesItem">consultation</li>
+                            <li className="businessCard__servicesItem">office decoration</li>
+                        </ul>
                    
-                    <p className="businessCard__location"><span className="businessCard__locationLogo"><Location/></span>Calgary, Alberta</p>
+                   
+                    
 
-                    <a href="" className="businessCard__link">
-                            <img src="" alt="Rating image" className="businessCard__rating" />
-                        </a>
+                   
+                   
+
+                  
+                    
                     <section className="businessCard__socials">
                         
                         <a href="" className="businessCard__link">
-                            <img src="" alt="instagram" className="businessCard__instagram" />
+                            <Instagram className="businessCard__social"/> 
                             </a>
                         <a href="" className="businessCard__link">
-                            <img src="" alt="email" className="businessCard__email" />
+                            <Mail className="businessCard__social" /> 
                         </a>
                         <a href="" className="businessCard__link">
-                            <img src="" alt="linkedin" className="businessCard__linkedin" />
+                             <LinkedIn className="businessCard__linkedin"/> 
                         </a>
                         <a href="" className="businessCard__link">
-                            <img src="" alt="phone" className="businessCard__phone" />
+                             <Phone className="businessCard__social"/>
                         </a>
                     </section>
-                    
-                
-                    
-                    
-                    
-                
+                    <section className="businessCard__profile">
+                        {/* <Link to= {`business/${props.businessDetails.id}`}key={props.businessDetails.id}>
+                        </Link> */}
+                        <button className="businessCard__profileButton businessCard__profileButton--Desktop">
+                            view profile 
+                        </button>
+                        <button className=" businessCard__profileButton businessCard__profileButton--Mobile">
+                            <img className="businessCard__eyeIcon" src={seeMore} alt="see more" />
+                        </button>
+                        <section className="businessCard__AddShare">
+                        <button className="businessCard__Add">
+                            <Add className="businessCard__add"/>
+                        </button>
+                        <button className="businessCard__Share">
+                            <Share className="businessCard__share"/>
+                        </button>
+                    </section>
+                    </section>
 
                 </section>
             </section>
         </section>
+        <section className="example">
+               <Group4/>
+        </section>
+        </>
+        
         
     )
 }

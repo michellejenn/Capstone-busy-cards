@@ -9,6 +9,7 @@ function BusinessDetailsPage(){
     return(
         <>
           <Header/>
+          
        
         
           

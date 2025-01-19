@@ -1,7 +1,7 @@
 
 function Location(){
     return(
-        <svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" version="1.1" width="20" height="20" viewBox="0 0 256 256" xmlSpace="preserve">
+        <svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" version="1.1" width="24" height="18" viewBox="0 0 256 256" xmlSpace="preserve">
         <defs></defs>
         <g
           style={{
@@ -26,7 +26,7 @@ function Location(){
               strokeLinecap: "butt",
               strokeLinejoin: "miter",
               strokeMiterlimit: 10,
-              fill: "rgb(4,136,219)",
+              fill: "black",
               fillRule: "nonzero",
               opacity: 1,
             }}
