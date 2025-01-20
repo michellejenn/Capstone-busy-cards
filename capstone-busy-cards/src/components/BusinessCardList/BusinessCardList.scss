@@ -1,0 +1,38 @@
+@use "../../styles/partials/variables" as *;
+// @use "../../styles/partials/font" as *;
+@use "../../styles/partials/mixins" as *;
+
+// background-color: #274e64;  background-color:rgb(89, 2, 2);  background-color:rgb(19, 134, 19);
+   
+
+ 
+
+   
+
+.businessCardList{
+
+
+&__Item{
+        padding: 0;
+        @include tablet{
+            display:flex;
+            flex-wrap: wrap;
+           justify-content: space-around;
+      
+        }
+    
+    }
+    &__header{
+        width: 100%;
+       word-spacing: 0.2rem;
+       letter-spacing: 0.2rem;
+       font-size: 3rem;
+       text-align: center;
+       margin:2rem;
+    }
+ 
+  
+  
+
+
+}

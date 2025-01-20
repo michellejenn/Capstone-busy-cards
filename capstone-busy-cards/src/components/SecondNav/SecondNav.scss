@@ -1,0 +1,43 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/fonts" as *;
+@use "../../styles/partials/mixins" as *;
+
+.SecondNav{
+    &__nav{
+        display: flex;
+        font-size: 1.4rem;
+        justify-content: space-between;
+        align-items: center;
+        color:#274e64;
+        border-bottom: 1px solid grey;
+        margin: 0 1rem;
+        padding:  1rem 0;
+    }
+    &__navitem--mobile{
+            display:none;
+            @include tablet{
+                display:initial;
+            }
+    }
+    
+    &__more{
+        display: flex;
+        align-items: center;
+        border: none;
+        background-color: white;
+        font-size:1.2rem;
+        color:#274e64;
+        font-weight: bold;
+    }
+    
+    &__button{
+        font-size: 1.2rem;
+        display:flex;
+        align-items: center;
+        padding: 0.6rem;
+        border-radius: 1rem;
+        border: 0;
+        color: #274e64;
+        font-size: bold;
+    }
+}

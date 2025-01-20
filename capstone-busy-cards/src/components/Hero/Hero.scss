@@ -1,5 +1,5 @@
 @use "../../styles/partials/variables" as *;
-// @use "../../styles/partials/font" as *;
+@use "../../styles/partials/fonts" as *;
 @use "../../styles/partials/mixins" as *;
 img{
     margin:0;
@@ -7,28 +7,15 @@ img{
 }
 .Hero{
     margin-bottom: $mobile-padding-seperate;
-    // width: 50vw;
-//     height: 60vh;
-//     // position: relative;
-//     background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url("../../assets/images/Pictures/mediamodifier-2JCfWdGUauw-unsplash.jpg");
-//     background-size: cover;
-//     background-position: center; 
-//     color: $secondary-color-grey;
-//    padding: 0rem 2rem;
-//    display:flex;
-//    align-items: center;
-    // background: $primary-color-darkblue;
-    // background: linear-gradient(to bottom, $primary-color-peach,$primary-color-blue); // Navy to Orange
-    // display: flex;
-    // align-items: center;
-    // justify-content: center;
-    // position: relative;
-    // color: white;
-    
+
     &__heading{
         text-align: center;
         letter-spacing: 5px;
         word-spacing: 10px;
+        @include tablet{
+            font-size:3rem;
+           
+        }
     }
 
     &__wrapper{
@@ -41,9 +28,13 @@ img{
    width: 50%;
    display: flex;
    justify-self: center;
+   @include tablet{
+    font-size:1.9rem;
+    margin-left: 6rem;
+  
+   }
    
-//    letter-spacing: 1px;
-//    word-spacing: 1px;
+
   
    }
 
@@ -58,11 +49,9 @@ img{
      
         
     }
-    // &__inputItemsWrapper{
-    //     text-align: center;
-    // }
+
     &__image{
-        // width: 60vw;
+    
        
         width: 70vw;
     height: 70vh;
@@ -70,7 +59,7 @@ img{
     position:absolute;
     top: 4rem;
     left: 10rem;
-    // box-shadow: 12px 12px 2px 1px rgb(190, 178, 155);  
+
     box-shadow: 3px 3px grey, -1em 0 .4em rgb(200, 171, 118);    
     }
     &__TopWrapper{
@@ -120,7 +109,6 @@ img{
         padding:1rem;
         height: 1rem;
         border-radius: 2rem;
-        // background-color: rgb(185, 148, 112);
         background-color: #c9a669;
         border: 0;
         box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2), 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -164,21 +152,32 @@ img{
 }
 .stash{
     display: flex;
+    border-bottom: 1.5px solid grey;
+    padding-bottom: 2rem;
     justify-content: center;
     position:relative;
     margin-top: 3rem;
     &__wrapper{
         border-radius: 2rem;
-        width: 25vw;
+       width: 50vw;
         position: relative;
-    // height: 50vh;
-    // border: 2px solid black;
     display: flex;
     flex-direction: column;
+    @include tablet{
+        width: 30vw;
+    }
+    @include desktop{
+        width: 25vw;
+    }
     &--first{
-        height: 55vh;
-        left: 4%;
-        top: 2.0rem;
+        display:none;
+        @include tablet{
+            height: 55vh;
+            left: 4%;
+            top: 2.0rem;
+            display: initial;
+        }
+       
         
     }
     &--second{
@@ -186,14 +185,21 @@ img{
         height: 60vh;
         z-index: 2;
         position: relative;
-       
-        box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.1), 0px 3px 15px rgba(0, 0, 0, 0.05);
+        
+        @include tablet{
+           box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.1), 0px 3px 15px rgba(0, 0, 0, 0.05);
+        }
     }
     &--third{
-        height: 55vh;
-        right: 4%;
-        z-index: 1;
-        top: 2.0rem;
+        display:none;
+        @include tablet{
+            height: 55vh;
+            right: 4%;
+            z-index: 1;
+            top: 2.0rem;
+            display: initial;
+        }
+       
     }
   
     
@@ -210,7 +216,7 @@ img{
            
             background-image: url('../../assets/images/Pictures/96d43f33a4.jpg');
             background-size: cover;
-            // top:30%;
+     
            
              
         }
@@ -243,8 +249,8 @@ img{
         background-color: #274e64; 
     }
     &__bottom--second{
-        height: 50%;
-        // background-color:rgb(121, 31, 31);
+        height: 55%;
+
         background-color:rgb(89, 2, 2);
     }
     &__bottom--third{
@@ -253,9 +259,6 @@ img{
     }
 }
 
-    //rgb(121, 31, 31);
-    // rgb(19, 134, 19);
-    // #274e64;
 
 
 

@@ -14,7 +14,7 @@ import BusinessCard from "../../components/BusinessCard/BusinessCard";
 function HomePage(){
     return(
         <>
-          <Header/>
+          <Header headerType="home"/>
           <Hero/>
           <Footer/>
          

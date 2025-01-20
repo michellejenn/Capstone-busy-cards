@@ -1,9 +1,6 @@
 import "./Hero.scss";
-// import brickImage from "../../assets/images/Pictures/brick-png-39821.png";
-import brickImage from "../../assets/images/Pictures/orange-bricks-1800-mm-architextures.jpg";
-import heroImage from "../../assets/images/Pictures/outsite-co-R-LK3sqLiBw-unsplash.jpg";
-// import brickImage from "../../assets/images/Pictures/orange-bricks-1800-mm-architextures.jpg";
-import firstImage from "../../assets/images/Pictures/96d43f33a4.jpg";
+
+
 
 const baseURL = import.meta.env.VITE_API_URL;
 
@@ -27,11 +24,7 @@ function Hero(){
                             type="text"
                             placeholder="Explore"
                             />
-                            {/* <input
-                            className="Hero__itemTop Hero__itemTop--create"
-                            type="text"
-                            placeholder="Create +"
-                            /> */}
+                        
                             <button className="Hero__itemButton Hero__itemTop--create">
                              Create +
                             </button>
@@ -45,18 +38,12 @@ function Hero(){
                             />
                             <button className="Hero__circle"></button>
 
-                            {/* <button className="Hero__circleOutline"></button> */}
+                      
                         </section>
                          
                      </div>
                      
-            {/* <img className="Hero__imageback"src= 
-            {brickImage}
-             alt="image" />
-             <div className="Hero__gradient"></div>
-             <img className="Hero__image"src= 
-            {heroImage}
-             alt="image" /> */}
+    
              
         </section>
         <section className="stash">

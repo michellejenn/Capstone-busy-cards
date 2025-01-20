@@ -1,15 +1,20 @@
 import "./Header.scss";
 import logo from "../../assets/images/Icons/BIZICARDLOGO.png";
+import {Link, NavLink} from "react-router-dom";
 
 const baseURL = import.meta.env.VITE_API_URL;
 
-function Header(props){
+function Header({headerType}){
     return(
         <header className="header">
             <section className="header__content">
-                <section className="header__banner">
-                    <img src= {logo}
+                
+               <section className="header__banner">
+               <NavLink to="/">
+               <img src= {logo}
                     alt="logo" className="header__logo" />
+               </NavLink>
+                  
                      <div className="header__search-container">
                         <input
                         className="header__search"
@@ -22,7 +27,19 @@ function Header(props){
                      </div>
                 </section>
                 <section className="header__items">
-                    <h1 className="header__item"> login </h1>  
+               
+                    {headerType === 'digitalCard' && (
+                        <>
+                            
+                            <h1 className="header__item">
+                                 Wallet <button className="header__walletItem"> 0</button></h1>
+                            <h1 className="header__item">Marketplace</h1>
+                            <h1 className="header__item">Logout</h1>
+                           
+                        </>
+                    )}
+                    {headerType ==='home' && <h1 className="header__item"> login </h1> }
+                     
                 </section>
             </section>
         </header>

@@ -3,7 +3,7 @@ function Add() {
         <svg 
         fill="#000000" 
         xmlns="http://www.w3.org/2000/svg" 
-        xmlns:xlink="http://www.w3.org/1999/xlink" 
+        xmlnsXlink="http://www.w3.org/1999/xlink" 
         width="30px" 
         height="30px" 
         viewBox="0 0 885.389 885.389"
