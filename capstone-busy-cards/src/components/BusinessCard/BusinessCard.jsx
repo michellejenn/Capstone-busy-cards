@@ -103,8 +103,7 @@ function BusinessCard({business, services, getCategoryName}){
                         </a>
                     </section>
                     <section className="businessCard__profile">
-                        {/* <Link to= {`business/${props.businessDetails.id}`}key={props.businessDetails.id}>
-                        </Link> */}
+                        
                         <Link to={`/digitalCard/${business.id}`} key={business.id}>
                         <button className="businessCard__profileButton businessCard__profileButton--Desktop">
                             view profile 
@@ -126,9 +125,7 @@ function BusinessCard({business, services, getCategoryName}){
                 </section>
             </section>
         </section>
-        {/* <section className="example">
-               <Group4/>
-        </section> */}
+        
         </>
         
         
@@ -137,70 +134,3 @@ function BusinessCard({business, services, getCategoryName}){
 
 export default BusinessCard;
 
-// import "./BusinessCard.scss";
-// import { Link } from "react-router-dom";
-// import Location from "../Icons/Location";
-// import Group4 from "../Icons/Group4";
-
-// const baseURL = import.meta.env.VITE_API_URL;
-
-// function BusinessCard({ business }) {
-//   return (
-//     <section className="businessCard__wrapper">
-//       <section className="businessCard">
-//         {/* Business Card Header */}
-//         <section className="businessCard__top">
-          
-//           <div className="businessCard__logo">
-//             {/* Placeholder for logo */}
-//             <Group4/>
-//             <img
-           
-//               src=  {business.logo || "default-logo.png"}
-//               alt={`${business.name} logo`}
-//             />
-//           </div>
-//           <h3 className="businessCard__name">
-//             {business.name}{" "}
-//             {business.verified && (
-//               <span className="businessCard__detail">Verified</span>
-//             )}
-//           </h3>
-//           <p className="businessCard__category">{business.category}</p>
-//           <p className="businessCard__services">
-//             Services: {business.services.join(", ")}
-//           </p>
-//         </section>
-
-//         {/* Business Card Footer */}
-//         <section className="businessCard__bottom">
-//           <p className="businessCard__location">
-//             <span className="businessCard__locationLogo">
-//               <Location />
-//             </span>
-//             {business.location}
-//           </p>
-//           <div className="businessCard__socials">
-//             {business.socials.map((social, index) => (
-//               <a
-//                 key={index}
-//                 href={social.link}
-//                 className="businessCard__link"
-//                 target="_blank"
-//                 rel="noopener noreferrer"
-//               >
-//                 <img
-//                   src={social.icon}
-//                   alt={social.platform}
-//                   className={`businessCard__icon businessCard__${social.platform}`}
-//                 />
-//               </a>
-//             ))}
-//           </div>
-//         </section>
-//       </section>
-//     </section>
-//   );
-// }
-
-// export default BusinessCard;

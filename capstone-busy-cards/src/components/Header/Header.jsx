@@ -37,8 +37,10 @@ function Header({headerType}){
                             <h1 className="header__item">Logout</h1>
                            
                         </>
-                    )}
-                    {headerType ==='home' && <h1 className="header__item"> login </h1> }
+                    )}                      
+                    <NavLink to="/digitalCard">
+                    {headerType ==='home' && <h1 className="header__item"> Login </h1> }
+                    </NavLink>
                      
                 </section>
             </section>

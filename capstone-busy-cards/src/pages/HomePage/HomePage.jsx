@@ -6,9 +6,6 @@ import Footer from "../../components/Footer/Footer";
 
 const baseURL = import.meta.env.VITE_API_URL;
 
-import BusinessCard from "../../components/BusinessCard/BusinessCard";
-
-
 
 
 function HomePage(){

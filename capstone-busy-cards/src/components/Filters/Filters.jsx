@@ -26,9 +26,7 @@ function Filters({selectedTag, clickedTagHandler}){
     return(
         <section className="filter">
             
-            {/* <h2 className="filter__header">
-                FILTER <DropDown/>
-            </h2> */}
+          
         
             <ul className="filter__list">
                 {services?.map((service,index)=>{

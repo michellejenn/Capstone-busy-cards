@@ -25,43 +25,35 @@ img{
    color:rgb(111, 108, 108);
    font-size: 1.5rem;
    font-weight: 100;
-   width: 50%;
-   display: flex;
    justify-self: center;
+ 
+   display: flex;
+   &--first{
+    justify-self: center;
+   }
+   &--second{
+    font-size: 1.2rem;
+   }
    @include tablet{
     font-size:1.9rem;
     margin-left: 6rem;
+    width: 60%;
+    justify-self: center;
+    &--second{
+        font-size: 1.2rem;
+       }
   
+   }
+   @include desktop{
+    width:50%;
+    margin-left:10rem;
    }
    
 
   
    }
 
-    &__imageback{
-        width: 70vw;
-        height: 70vh;
-        object-fit: cover;
-        position:absolute;
-        top: 2rem;
-    left: 8rem;
-   
-     
-        
-    }
-
-    &__image{
     
-       
-        width: 70vw;
-    height: 70vh;
-    object-fit: cover;
-    position:absolute;
-    top: 4rem;
-    left: 10rem;
-
-    box-shadow: 3px 3px grey, -1em 0 .4em rgb(200, 171, 118);    
-    }
     &__TopWrapper{
         display: flex;
         gap: 1rem;
@@ -88,18 +80,20 @@ img{
       
 
        
-        &--explore::placeholder{
-            color: grey;
+        &--explore{
+            color: black;
+            background-color: white;
+            border: 1px solid grey;
+            padding: 0.9rem 3.5rem;
+            font-weight:bold;
+            font-size: 1rem;
         
 
         }
         &--create{ 
             background-color: black;
             
-            &::placeholder{
-                color: white;
-                
-            }
+         
         }
        
 
@@ -128,9 +122,11 @@ img{
     }
     &__itemBottom{
         border-radius: 2rem;
-        padding: 0.5rem;
-        width: 32vw;
+        padding: 0.9rem 3.5rem;
+        width: 40vw;
         text-align: center;
+        border: 1px solid grey;
+        
    
        
         &::placeholder{
@@ -157,6 +153,7 @@ img{
     justify-content: center;
     position:relative;
     margin-top: 3rem;
+    
     &__wrapper{
         border-radius: 2rem;
        width: 50vw;
@@ -172,7 +169,7 @@ img{
     &--first{
         display:none;
         @include tablet{
-            height: 55vh;
+            height: 65vh;
             left: 4%;
             top: 2.0rem;
             display: initial;
@@ -182,18 +179,19 @@ img{
     }
     &--second{
        
-        height: 60vh;
+        height: 70vh;
         z-index: 2;
         position: relative;
         
         @include tablet{
-           box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.1), 0px 3px 15px rgba(0, 0, 0, 0.05);
+            box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1), 8px 8px 16px rgba(0, 0, 0, 0.2);
+
         }
     }
     &--third{
         display:none;
         @include tablet{
-            height: 55vh;
+            height: 65vh;
             right: 4%;
             z-index: 1;
             top: 2.0rem;
@@ -206,7 +204,7 @@ img{
 }
     &__top{
         
-        height:30vh;
+        height:35vh;
         border-radius: 2rem 2rem 0 0;
         position:relative;
        
@@ -226,7 +224,7 @@ img{
             background-size: cover;
             position:relative;
            
-           top:0%;
+      
 
         }
         &--third{
