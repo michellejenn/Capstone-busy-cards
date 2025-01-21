@@ -14,7 +14,7 @@ import Share from "../Icons/Share";
 import verified from '../../assets/images/Icons/icons8-verified-48.png'
 const baseURL = import.meta.env.VITE_API_URL;
 
-function BusinessCard({business, services, getCategoryName}){
+function BusinessCard({business, services, getCategoryName,styleType}){
 
     const categoryMap = {
         1: 'Landscaping',
@@ -30,7 +30,7 @@ function BusinessCard({business, services, getCategoryName}){
     return(
         <>
         <section className="businessCard__wrapper">
-                    <section className="businessCard">
+                    <section className={`businessCard businessCard--${styleType}`}>
                         <section className="businessCard__top">
                         <article className="businessCard__logoWrapper">
                             <img className ="businessCard__logo"src={logoIcon} alt="" />
@@ -68,7 +68,7 @@ function BusinessCard({business, services, getCategoryName}){
                             </span>{business.location}</p>
                     </section>
                         <ul className="businessCard__services">
-                            {services?.slice(0, 3).map((service, index)=>(
+                            {services?.slice(0, 2).map((service, index)=>(
                                <li key={index}className="businessCard__servicesItem">
                                         {service.service_name}
                                </li>
@@ -102,6 +102,7 @@ function BusinessCard({business, services, getCategoryName}){
                              <Phone className="businessCard__social"/>
                         </a>
                     </section>
+                   
                     <section className="businessCard__profile">
                         
                         <Link to={`/digitalCard/${business.id}`} key={business.id}>
@@ -120,6 +121,22 @@ function BusinessCard({business, services, getCategoryName}){
                             <Share className="businessCard__share"/>
                         </button>
                     </section>
+                    </section>
+
+                    <section className=" businessCard__socials businessCard__socials--mobile">
+                        
+                        <a href={business.instagram_handle} className="businessCard__link">
+                            <Instagram className="businessCard__social"/> 
+                            </a>
+                        <a href={business.email} className="businessCard__link">
+                            <Mail className="businessCard__social" /> 
+                        </a>
+                        <a href={business.linkedin_address} className="businessCard__link">
+                             <LinkedIn className="businessCard__linkedin"/> 
+                        </a>
+                        <a href={business.phone_no} className="businessCard__link">
+                             <Phone className="businessCard__social"/>
+                        </a>
                     </section>
 
                 </section>

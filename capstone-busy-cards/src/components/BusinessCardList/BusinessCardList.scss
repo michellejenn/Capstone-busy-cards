@@ -1,25 +1,14 @@
 @use "../../styles/partials/variables" as *;
 @use "../../styles/partials/fonts" as *;
 @use "../../styles/partials/mixins" as *;
-
-
-
- 
-
-   
-
 .businessCardList{
-
-
 &__Item{
         padding: 0;
         @include tablet{
             display:flex;
             flex-wrap: wrap;
            justify-content: space-around;
-      
         }
-    
     }
     &__header{
         width: 100%;
@@ -29,9 +18,4 @@
        text-align: center;
        margin:2rem;
     }
- 
-  
-  
-
-
 }

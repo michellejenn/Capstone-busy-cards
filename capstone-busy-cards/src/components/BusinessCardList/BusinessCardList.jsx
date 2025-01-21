@@ -34,12 +34,15 @@ function BusinessCardList({businesses, services,selectedTag, getCategoryName}){
                 What services are you here for? 
             </h1>
             <ul className="businessCardList__Item">
-            {filteredBusinesses?.map((business)=>{
+            {filteredBusinesses?.map((business,index)=>{
                 return  <BusinessCard 
                 key={business.id} 
                 business={business} 
                 services={services[business.id]}
-                getCategoryName={getCategoryName}/>
+                getCategoryName={getCategoryName}
+                styleType={index % 3 === 0 ? "maroon" : (index % 3 === 1 ? "green" : "blue")}
+
+                />
             })}
            
         </ul>

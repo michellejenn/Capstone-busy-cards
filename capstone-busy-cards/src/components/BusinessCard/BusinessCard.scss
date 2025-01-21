@@ -4,31 +4,44 @@
 
 .businessCard{
     
-    width:60vw;
+    width:100%;
      color:lightgrey;
      margin:  2rem 0;
-  
+   
 
      @include tablet{
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 
-      0 1px 3px rgba(0, 0, 0, 0.06), 
-      0 10px 20px rgba(0, 0, 0, 0.1);
+     
+    
 
      }
+     &--maroon {
+      @include applyCardColor($primary-color-maroon);
+    
+    
+    }
+  
+    &--green {
+      @include applyCardColor($primary-color-green)
+    
+    }
+    &--blue {
+      @include applyCardColor($primary-color-blue)
+   
+
+    }
+    
     &__wrapper{
-      background-color: lightgrey;
+      // background-color: lightgrey;
       width:80%;
       display: flex;
      justify-self:center;
-     margin:  2rem 0;
-     border-radius: 1rem;
-     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 
-     0 1px 3px rgba(0, 0, 0, 0.06), 
-     0 10px 20px rgba(0, 0, 0, 0.1);
+    //  margin:  2rem 0;
+    //  border-radius: 1rem; 
+ 
   
     @include tablet{
      
-      width: 40%;
+      width: 50%;
      
      
       
@@ -69,16 +82,15 @@
        border-radius: 0.5rem;
        display:flex;
        justify-content: flex-end;
+       background-image: url('../../assets/images/Pictures/76192288ed.jpg');
+       background-size: cover;
       
-       height: 23vh;
+       height: 30vh;
   
     
    
 }
     &__bottom{
-      
-        background-color:rgb(121, 22, 22);
-       
         border-radius: 2rem;
         border-top-left-radius: 20px;
         border-top-right-radius: 20px;
@@ -87,6 +99,11 @@
         padding: 0.5rem 1rem;
        
         box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+        min-height: 30vh;
+        @include tablet{
+          min-height: 40vh;
+        }
+        
       
     }
     &__starWrapper{
@@ -96,6 +113,11 @@
     &__star{
       width: 1.5rem;
       height: 1.5rem;
+      
+    }
+    &__starValue{
+      font-size: 1.2rem;
+      font-weight: 700;
     }
 
     &__detail{
@@ -110,12 +132,9 @@
     &__category{
       font-size: 1rem;
     }
-
     &__logoWrapper{
       width: 3.5rem;
       height: 3.5rem;
-      background-color:rgb(121, 22, 22);
-     
       display: flex;
       justify-content: center;
       align-items: center;
@@ -124,11 +143,6 @@
     &__logo{
         width: 1.5rem;
         height:1.5rem;
-        
-     
-        
-    
-       
     }
     &__profileWrapper{
       display:flex;
@@ -138,12 +152,9 @@
     }
     &__name{
         margin-bottom:0;
- 
         font-weight: bold;
         font-size: 1.5rem;
         white-space: nowrap;
-
-        
     }
     &__detail{
       display: inline-block;
@@ -155,14 +166,18 @@
       display:flex;
       justify-content: space-between;
       margin-top: 1rem;
- 
+      display:none;
+      &--mobile{
+        display: flex;
+      }
      
     }
     &__profile{
       display:flex;
-      justify-content: center;
-      gap: 2rem;
-  
+      justify-content: space-between;
+      @include tablet{
+        justify-content: space-around;
+      }
     }
     &__AddShare{
       display:flex;
@@ -191,7 +206,6 @@
           display: initial;
           font-size: 1.0rem;
         }
-        
       }
     }
     &__eyeIcon{
@@ -219,21 +233,13 @@
     }
     &__servicesItem{
       background-color: white;
-  
-      color: rgb(121, 22, 22);
-      padding: 0.4rem;
+      padding: 0 0.4rem;
       border-radius:0.9rem;
       &--number{
-        border-radius:0;
-       color: black;
-       background-color: rgb(121, 22, 22);
        border: 2px solid black;
        display:flex;
-
-      
       }
     }
-  
 }
 .example{
   margin:20rem;

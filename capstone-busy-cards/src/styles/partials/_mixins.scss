@@ -13,3 +13,32 @@
         @content;
     }
 }
+
+@mixin applyCardColor($color) {
+    .businessCard__bottom {
+      background-color: $color;
+    }
+  
+    .businessCard__logoWrapper {
+      background-color: $color;
+    }
+  
+    .businessCard__servicesItem {
+      color: $color;
+    }
+  
+    .businessCard__profileButton {
+      background-color: $color; // Text color for the name
+    }
+  
+    // .businessCard__category {
+    //   color: $color; // Text color for the category
+    // }
+  
+    // .businessCard__location {
+    //   color: $color; // Text color for the location
+    // }
+  
+  
+  }
+  
