@@ -15,6 +15,11 @@
 }
 
 @mixin applyCardColor($color) {
+    .businessCard__wrapper:hover{
+        
+            background-color: $color;
+          
+    }
     .businessCard__bottom {
       background-color: $color;
     }
@@ -28,16 +33,10 @@
     }
   
     .businessCard__profileButton {
-      background-color: $color; // Text color for the name
+      background-color: $color; 
     }
   
-    // .businessCard__category {
-    //   color: $color; // Text color for the category
-    // }
-  
-    // .businessCard__location {
-    //   color: $color; // Text color for the location
-    // }
+    
   
   
   }

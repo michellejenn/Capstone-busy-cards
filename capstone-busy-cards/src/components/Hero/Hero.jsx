@@ -59,10 +59,10 @@ function Hero(){
                         </section>
                         <section className="stash__wrapper stash__wrapper--second">
                             <article className="stash__top stash__top--second">
-
+                                
                             </article>
                             <article className="stash__bottom stash__bottom--second">
-                                
+                           
                             </article>
                         </section>
                         <section className="stash__wrapper stash__wrapper--third">

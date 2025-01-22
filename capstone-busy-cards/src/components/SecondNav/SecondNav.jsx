@@ -19,7 +19,7 @@ return(
         Top rated Businesses
     </li>
     <li className="SecondNav__navitem SecondNav__navitem--mobile">
-        Best Sellers
+        Location
     </li>
     <li className="SecondNav__navitem ">
       <button className="SecondNav__more">

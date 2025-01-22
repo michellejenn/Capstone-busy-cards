@@ -5,6 +5,7 @@ import MarketPlacePage from './pages/MarketPlacePage/MarketPlacePage';
 import Header from './components/Header/Header';
 import HomePage from './pages/HomePage/HomePage';
 import BusinessDetailsPage from './pages/BusinessDetailsPage/BusinessDetailsPage';
+import LoginPage from './pages/LoginPage/LoginPage';
 import { useState, useEffect } from "react";
 import axios from "axios";
 
@@ -72,8 +73,10 @@ return categoryMap[categoryId] || 'Unassigned Category';
     <BrowserRouter>
     <Routes>
       <Route path="/" element={ <HomePage/>}/>
-      <Route path="/digitalCard/" element={ <MarketPlacePage businesses={businesses} services={services} getCategoryName={getCategoryName}/>}/>
+      <Route path="/digitalCard" element={ <MarketPlacePage businesses={businesses} services={services} getCategoryName={getCategoryName}/>}/>
       <Route path="/digitalCard/:id" element={ <BusinessDetailsPage/>}/>
+     <Route path="/login" element={<LoginPage />} />
+      
     </Routes>
     </BrowserRouter>
   </>
